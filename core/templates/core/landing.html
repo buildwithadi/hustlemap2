@@ -45,10 +45,16 @@
             box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
         }
         .platform-icon {
-            width: 64px;
-            height: 64px;
+            width: 48px;
+            height: 48px;
             opacity: 0.7;
             transition: all 0.3s ease;
+        }
+        @media (min-width: 640px) {
+            .platform-icon {
+                width: 64px;
+                height: 64px;
+            }
         }
         .platform-icon:hover {
             opacity: 1;
@@ -70,44 +76,60 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+        /* Mobile-specific styles */
+        @media (max-width: 640px) {
+            .hero-section {
+                padding: 2rem 1rem;
+            }
+            .feature-grid {
+                gap: 1rem;
+            }
+            .feature-card {
+                padding: 1.5rem;
+            }
+            .cta-button {
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="min-h-screen flex flex-col">
         <!-- Hero Section -->
-        <div class="hero-gradient flex-grow flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
+        <div class="hero-gradient flex-grow flex items-center justify-center py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto text-center">
-                <h1 class="text-5xl md:text-7xl font-bold mb-8 gradient-text">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 sm:mb-8 gradient-text">
                     HUSTLEMAP
                 </h1>
-                <p class="text-2xl md:text-3xl mb-8 text-gray-300 max-w-3xl mx-auto">
+                <p class="text-xl sm:text-2xl md:text-3xl mb-6 sm:mb-8 text-gray-300 max-w-3xl mx-auto">
                     Your Personal Social Media Growth Roadmap
                 </p>
-                <div class="flex justify-center space-x-8 mb-12">
+                <div class="flex flex-wrap justify-center gap-4 sm:gap-8 mb-8 sm:mb-12">
                     <img src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png" alt="Instagram" class="platform-icon">
                     <img src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" alt="Twitter" class="platform-icon">
                     <img src="https://cdn-icons-png.flaticon.com/128/145/145807.png" alt="LinkedIn" class="platform-icon">
                     <img src="https://cdn-icons-png.flaticon.com/128/3046/3046121.png" alt="TikTok" class="platform-icon">
                     <img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" alt="YouTube" class="platform-icon">
                 </div>
-                <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                <p class="text-lg sm:text-xl text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto">
                     Get a personalized day-by-day action plan to grow your social media presence. 
                     Choose your platform, set your timeline, and let us guide your journey to success.
                 </p>
                 <!-- Create Your Roadmap button removed -->
 
                 <!-- Waitlist Section in Hero -->
-                <div class="mt-12 max-w-md mx-auto">
-                    <p class="text-lg text-gray-300 mb-6">
+                <div class="mt-8 sm:mt-12 max-w-md mx-auto">
+                    <p class="text-base sm:text-lg text-gray-300 mb-4 sm:mb-6">
                         Join our waitlist for exclusive updates and features!
                     </p>
                     <form class="max-w-md mx-auto" id="waitlistForm">
-                        <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex flex-col gap-4">
                             <input type="email" placeholder="Enter your email" 
-                                   class="waitlist-input flex-grow px-6 py-4 rounded-lg text-white focus:outline-none"
+                                   class="waitlist-input px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white focus:outline-none"
                                    id="waitlistEmail" required>
                             <button type="submit" 
-                                    class="cta-button px-6 py-4 text-lg font-semibold text-white rounded-lg">
+                                    class="cta-button px-6 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white rounded-lg">
                                 Join Waitlist
                             </button>
                         </div>
@@ -118,47 +140,47 @@
         </div>
 
         <!-- Features Section -->
-        <div class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center gradient-text">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-16 text-center gradient-text">
                     Why Choose HustleMap?
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
                     <!-- Feature 1 -->
-                    <div class="feature-card p-8">
+                    <div class="feature-card p-6 sm:p-8">
                         <div class="text-indigo-500 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-10 h-10 sm:w-12 sm:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-semibold mb-4">Personalized Roadmaps</h3>
-                        <p class="text-gray-400">
+                        <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Personalized Roadmaps</h3>
+                        <p class="text-sm sm:text-base text-gray-400">
                             Get custom-tailored strategies based on your platform and niche. No generic advice.
                         </p>
                     </div>
 
                     <!-- Feature 2 -->
-                    <div class="feature-card p-8">
+                    <div class="feature-card p-6 sm:p-8">
                         <div class="text-cyan-500 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-10 h-10 sm:w-12 sm:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-semibold mb-4">Actionable Steps</h3>
-                        <p class="text-gray-400">
+                        <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Actionable Steps</h3>
+                        <p class="text-sm sm:text-base text-gray-400">
                             Clear, day-by-day tasks that you can implement immediately to see real growth.
                         </p>
                     </div>
 
                     <!-- Feature 3 -->
-                    <div class="feature-card p-8">
+                    <div class="feature-card p-6 sm:p-8">
                         <div class="text-blue-500 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-10 h-10 sm:w-12 sm:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-semibold mb-4">Track Progress</h3>
-                        <p class="text-gray-400">
+                        <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Track Progress</h3>
+                        <p class="text-sm sm:text-base text-gray-400">
                             Follow your growth journey with clear milestones and achievable goals.
                         </p>
                     </div>
@@ -167,8 +189,8 @@
         </div>
 
         <!-- Footer -->
-        <footer class="py-6 text-center text-gray-500">
-            <p>Built with 💖 by <a href="https://x.com/buildwithadii" target="_blank" class="text-indigo-500 hover:text-indigo-400 transition-colors">Aditya Rawat</a></p>
+        <footer class="py-4 sm:py-6 text-center text-gray-500">
+            <p class="text-sm sm:text-base">Built with 💖 by <a href="https://x.com/buildwithadii" target="_blank" class="text-indigo-500 hover:text-indigo-400 transition-colors">Aditya Rawat</a></p>
         </footer>
     </div>
 

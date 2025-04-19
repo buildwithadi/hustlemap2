@@ -20,7 +20,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-your-secret-key-here'
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 # Set ALLOWED_HOSTS
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['hustlemap.onrender.com', 'localhost', '127.0.0.1']
 
 # Use X-Forwarded-Host header
 USE_X_FORWARDED_HOST = True

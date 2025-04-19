@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: hustlemap
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn hustlemap.wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: False
+      - key: DATABASE_URL
+        fromDatabase:
+          name: hustlemap-db
+          property: connectionString
+    plan: free 
